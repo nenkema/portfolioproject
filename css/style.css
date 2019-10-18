@@ -1,0 +1,325 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  color: black; 
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  display: block;
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+  padding: 50px 0;
+  text-align: left;
+  display: block;
+}
+
+p{
+  font-size: 32px;
+  line-height: 1.5;
+  padding: 50px 0;
+  text-align: left;
+  display: block;
+
+}
+
+nav ul{
+  list-style-type: none;
+}
+
+nav li{
+  display: inline; 
+  padding-right: 20px;
+}
+
+/* nav li:hover{
+  text-decoration: underline;
+} */
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: right;
+  
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute;
+  top: -40px;
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+}
+
+a.skip{
+top:auto;
+}
+
+.skip a:focus, .skip a:active{
+  border: 2px slid black;
+  left: auto;
+  top:auto;
+  height: auto;
+  overflow: auto;
+  margin: 40px;
+  padding: 6px;
+  z-index: 999;
+}
+
+*:focus{
+  border: 2px solid black;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  /*Can you explain what this does? ... -1 allows it to span the whole page */
+  grid-row: 7 / auto;   /*Can you rewrite it? ...grid-row: 7 / span 1; */
+  padding-top: 30px;
+  text-align: center;
+  /* grid-column: 1 / span 3;
+  grid-row: 7 / span 1; */
+  /* grid-column: 1 / span 3;
+ */
+}
+
+
+.container{
+  display: grid;
+  
+  grid-template-columns: 100px 500px 100px; 
+  /* grid-template-columns: 1fr; */
+  grid-row-gap: 15px;
+  /* display: block;  */
+  /* margin-left: auto; 
+  margin-right: auto;  */
+  /*Provided*/
+  grid-template-rows: 30px auto auto auto auto auto 100px; 
+  width: 100vw; 
+  /* padding: 30px; */
+}
+
+.nav{
+   /*Your code here */
+
+  /*Provided*/
+  background-color: #ddd;
+  padding: 20px 0; 
+  text-align: left; 
+  align-content: center;
+  grid-column-start: 1; 
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end:2;
+}
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/header.jpg"); 
+  /* background-image: url("/Users/noelle/Desktop/umsi-webdesign-master-new9:24/week_4_grid/HomeworkFour/images/header.jpg");    Your code here - Link to header.jpg in the images folder */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;  
+  grid-column: 1 / -1;   
+  grid-row: 2 / span 1;        
+  /* grid-column: 1 / span 3;  */
+  /* grid-row: 2 / span 1;  */
+  /*Your code here - cover the entire row*/
+
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.about-image{
+  grid-column: 1 / span 3; 
+  grid-row: 3 / span 1; 
+  max-height: 700px; 
+  overflow: hidden;
+
+}
+
+.about{
+  grid-column: 2 / span 1; 
+  grid-row: 3 / span 1;
+}
+
+.method-image{
+  grid-column: 1 / span 3;
+  grid-row: 4 / span 1; 
+  max-height: 700px; 
+  overflow: hidden; 
+}
+
+.method{
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1; 
+}
+
+.clients-image{
+ grid-column: 1 / span 3;
+ grid-row: 5 / span 1;
+ max-height: 700px; 
+ overflow: hidden;
+}
+
+.clients{
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+
+.contact-image{
+  grid-column: 1 / span 3;
+  grid-row: 6 / span 1;
+  max-height: 700px; 
+  overflow: hidden;
+  
+}
+
+.contact{
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+}
+
+.text-block{
+
+   /*Your code here */
+  text-align: center; 
+  margin: auto 0;
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+}
+
+
+
+@media screen and (min-width: 800px){
+
+  .container{
+    display: grid;
+    transition: none;
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
+    grid-template-columns: 50px auto 500px auto 50px;
+  }
+
+  /* div:nth-child(odd){
+    grid-template-columns: 1fr auto;
+  }
+
+  div:nth-child(even){
+    grid-template-columns: auto 1fr;
+  } */
+
+  .nav{
+    background-color: #ddd;
+    text-align: right; 
+    align-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    /* grid-column: 1 / span 3; */
+    grid-column: 1 / -1;
+    grid-row: 1 / span 1;
+
+
+     /*Your code here */
+  }
+
+  .about-image{
+     grid-column: 2 / span 2;
+     grid-row: 3 / span 1; 
+     max-height: 700px; 
+     overflow: hidden;
+
+    }
+
+  .about{
+    grid-column: 3 / span 2;
+    grid-row: 3 / span 1;
+  }
+
+  .method-image{
+    grid-column: 3 / span 2;
+    grid-row: 4 / span 1;
+    max-height: 700px;
+    overflow: hidden;
+  }
+
+  .method{
+    grid-column: 2 / span 2;
+    grid-row: 4 / span 1;
+  }
+
+  .clients-image{
+    grid-column: 2 / span 2;
+    grid-row: 5 / span 1;
+    max-height: 700px;
+    overflow: hidden;
+
+  }
+
+  .clients{
+    grid-column: 3 / span 2;
+    grid-row: 5 / span 1;
+  }
+
+  .contact-image{
+    grid-column: 3 / span 2;
+    grid-row: 6 / span 1;
+    max-height: 700px;
+    overflow: hidden;
+  }
+
+  .contact{
+    grid-column: 2 / span 2;
+    grid-row: 6 / span 1;
+   }
+
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;/* Your code here - set to default setting */
+    transition: none !important;/* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
+}
