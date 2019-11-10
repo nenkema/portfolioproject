@@ -72,6 +72,8 @@ font-family: 'Nanum Gothic', sans-serif;
 
 
 
+
+
 h1{
 font-size: 50px;
 color: black;
@@ -192,10 +194,9 @@ border: 2px solid black;
 footer{
 background-color: black;
 color: white;
-grid-column: 1 / -1;  /*Can you explain what this does? ... -1 allows it to span the whole page */
-grid-row: 7 / auto;   /*Can you rewrite it? ...grid-row: 7 / span 1; */
+grid-column: 1 / -1;  
+grid-row: 7 / auto;   
 padding-top: 30px;
-text-align: center;
 /* position: fixed; */
 /* grid-column: 1 / span 3;
 grid-row: 7 / span 1; */
@@ -301,7 +302,29 @@ margin: auto;
   flex-direction: column;
   background-color: white; /* colour added just for visibility purposes when debugging */
   /* margin: auto; */
+  /* height: 200px;  */
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  resize: vertical; 
+
   }
+
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */  
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+
+
+
+
+
 
 .about > img {
 object-fit: cover;
@@ -370,7 +393,8 @@ padding: 30px;
   display: flex; 
   flex-wrap: wrap; 
   flex-direction: row; 
-  padding: 0 4px; 
+  padding: 0 4px;
+  
   /* flex: 33.33%;  */
   /* max-width: 33.33%;  */
   /* padding: 0 4px;  */
@@ -380,34 +404,6 @@ padding: 30px;
   /* width: 100%;  */
 
 }
-
-/* img {
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  width: 150px;
-} */
-
-
-#about-image {
-  /* border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 5px;
-  
-  max-width: 80%;
-  max-height: 100%;  */
-  /* background-color: white; */
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-  /* text-align: center; */
-  /* padding: 10px 20px; */
-  /* object-fit: cover; */
-  /* width: 100%;
-  height: 80px;  */
-}
-
-/* .about-image.shadow-inset-center{
-
-} */
 
 .gallery-images img{
   /* width: 33.33%; */
@@ -439,6 +435,35 @@ padding: 30px;
   /* background-color: white; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
+.hit-the-floor {
+  color: #fff;
+  font-size: 12em;
+  font-weight: bold;
+  font-family: Helvetica;
+  text-shadow: 
+    0 1px 0 #ccc, 
+    0 2px 0 #c9c9c9, 
+    0 3px 0 #bbb, 
+    0 4px 0 #b9b9b9, 
+    0 5px 0 #aaa, 
+    0 6px 1px rgba(0,0,0,.1), 
+    0 0 5px rgba(0,0,0,.1), 
+    0 1px 3px rgba(0,0,0,.3), 
+    0 3px 5px rgba(0,0,0,.2), 
+    0 5px 10px rgba(0,0,0,.25), 
+    0 10px 10px rgba(0,0,0,.2), 
+    0 20px 20px rgba(0,0,0,.15);
+}
+
+.hit-the-floor {
+  text-align: center;
+}
+
+/* body {
+  background-color:;
+} */
+
 
 
 @media screen and (min-width: 800px){
@@ -563,17 +588,79 @@ div:nth-child(even){
   display:flex;
   justify-content: center;
   align-content: center;
+  padding-bottom: 20px; 
+
 }
 
 .gallery-images{
   display: grid;
   grid-template: repeat(3, 300px) / repeat(3, 300px);
+
 }
 
 .gallery-images img{
   object-fit: cover;
   width: 100%;
 }
+
+.gallery-images img[src="images/pbcookies.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/bowl.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/granola.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/holidaymeal.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/travelsnack.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/chocolatedrizzle.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/pbtoast.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/sushiwrap.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.gallery-images img[src="images/avotoast.jpg"]:hover{
+  opacity: 0.3;
+}
+
+.parallax {
+  background-image: url ("noellelogo.jpg"); 
+  height: 70px; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* 
+.parallaxtwo{
+  background-image: url ("images/acai.jpg"); 
+  height: 150px;  
+  width: 80%; 
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-size: cover;
+}   */
+
+
+
+
+
+
 
 }  /*End the media query*/
 
@@ -610,6 +697,7 @@ html{
   }
 }
 
+
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 
 @media screen and (max-width: 600px) {
@@ -618,3 +706,4 @@ html{
     max-width: 100%;
   }
 }
+

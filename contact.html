@@ -8,11 +8,13 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <!-- <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet"> -->
-    <div class = "logo">
-        <img src="noellelogo.jpg" alt="logo photo"/>
-    </div>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+  <main>
+      <div class = "logo">
+          <img src="noellelogo.jpg" alt="logo photo"/>
+      </div>
       <div class="skip"><a href="#main">Skip to Main Content</a></div>
       <div class="nav">
           <nav>
@@ -29,38 +31,47 @@
     </div> <!-- closes "nav"-->
     <div id="container">
     <header id="main"> 
+      <!-- <div class="hit-the-floor">404</div> -->
+      <div class="parallaxtwo">
+      <div class="hit-the-floor">
       <h1>CONTACT ME!</h1>
+      </div>
+      </div>
       <p>Interested in talking about cooking, any of my recipes, or veganism? Reach out and let’s​ ​chat!</p>
     </header>
     <div class="form">
-      <form action="action_page.php">
-    
+      <form action="https://formspree.io/mqkkkvjn" method="POST">
+      
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
-    
+
         <label for="lname">Last Name</label>
         <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-    
-        <!-- <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select> -->
-    
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" placeholder="Your email..">
+       
         <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-    
+        <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+
         <input type="submit" value="Submit">
     
-      </form>
-    </div>
-    </div> <!-- closes container -->
+        </form>
+        </div>
+        </div> 
 
     <footer>
         <p> Noelle Enkema <br/>
             Recipes and Cooking Inspiration</p>
     </footer>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'UA-151810529-1');
+    </script>
+  
+  </main>
   </body>
 </html>
